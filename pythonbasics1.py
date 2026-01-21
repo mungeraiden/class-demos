@@ -20,3 +20,20 @@ y = 10.5
 x = "This is a string now"
 
 print(x, type(x))
+
+
+x = True
+x = False
+
+# Operators
+
+x = 5 // 2
+print(x, type(x))
+
+x = 5 % 2
+
+print(x, type(x))
+
+x = 3 ** 2
+
+print(x, type(x))
