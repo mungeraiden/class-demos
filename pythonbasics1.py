@@ -55,3 +55,56 @@ print(f"This is a string {x}")
 print(f"x = {x:.2f}")
 
 print(f"x = {round(x, 2)}")
+
+###############################################
+# USER INPUT
+
+# fav_num = int(input("What is your favorite number?"))
+
+# print(type(fav_num))
+# print(f"Your favorite number is {fav_num + 1}")
+
+
+###############################################
+# Conditionals
+
+temp = 600
+humidity = 100
+
+if temp < 45:
+    print("It's cold outside")
+elif temp > 80:
+    print("It's hot outside")
+    if humidity > 90:
+        print("It's also very humid")
+else:
+    print("It's nice outside")
+    
+###############################################
+# Loops
+
+
+for num in [1, 6, 7]:
+    print(num)
+
+for letter in "hello":
+    print(letter)
+
+# for i in range(10, -1, -1):
+#     print(i, end = " ")
+
+for i in range(2, 39, 2):
+    print(i, end = ", ")
+print(i + 2)
+
+x = 0
+
+while x < 5:
+    print(x)
+    x += 1
+
+x = 0
+while x != 38:
+    x += 2
+    print(x, end = ", ")
+print(x + 2)
