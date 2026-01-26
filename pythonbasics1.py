@@ -2,7 +2,9 @@
 # 1/21/2026
 # Python Basics 1
 
-import math, datetime, random as rn
+import math
+import random
+from datetime import *
 
 #################################################
 # Basic Print
@@ -111,4 +113,56 @@ print(x + 2)
 
 
 ###############################################
+# Break and Continue
+
+while True:
+    user_input = input("Enter a word (\"stop\" to exit): ")
+    if user_input.lower() == "stop":
+        break
+    if user_input == "next":
+        continue
+        print(user_input)
+print("Outside the loop")
+
+###############################################
+# Functions
+
+def my_msg(msg):
+    """
+    prints out msg with the date and time appended to the front    
+    """
+    print(f"{datetime.now()}: {msg}")
+
+my_msg("This is a test message.")
+my_msg("This is another message.")
+my_msg("This is yet another message.")
+
+def double(x):
+    return x * 2
+
+x = int(input("Enter a number to double"))
+print(double(x))
+
+def circle(radius):
+    return 2 * math.pi * radius, math.pi * radius ** 2
+
+radius = float(input("Enter the radius of a circle: "))
+circumference, area = circle(radius)
+print(f"Circumference: {circumference:.2f}, Area: {area:.2f}")
+
+###############################################
+# Random
+
+random.seed(0)   # sets the seed for reproducibility
+
+roll1 = random.randint(1, 6)
+roll2 = random.randint(1, 6)
+roll3 = random.randint(1, 6)
+print(f"Rolls: {roll1}, {roll2}, {roll3}")
+
+
+###############################################
+# Lists
+
+list_ints = [2, 100, 5, -10]
 
