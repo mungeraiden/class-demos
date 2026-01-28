@@ -114,7 +114,7 @@ print(x + 2)
 
 ###############################################
 # Break and Continue
-
+'''
 while True:
     user_input = input("Enter a word (\"stop\" to exit): ")
     if user_input.lower() == "stop":
@@ -123,7 +123,7 @@ while True:
         continue
         print(user_input)
 print("Outside the loop")
-
+'''
 ###############################################
 # Functions
 
@@ -140,15 +140,15 @@ my_msg("This is yet another message.")
 def double(x):
     return x * 2
 
-x = int(input("Enter a number to double"))
-print(double(x))
+#x = int(input("Enter a number to double"))
+#print(double(x))
 
 def circle(radius):
     return 2 * math.pi * radius, math.pi * radius ** 2
 
-radius = float(input("Enter the radius of a circle: "))
-circumference, area = circle(radius)
-print(f"Circumference: {circumference:.2f}, Area: {area:.2f}")
+#radius = float(input("Enter the radius of a circle: "))
+#circumference, area = circle(radius)
+#print(f"Circumference: {circumference:.2f}, Area: {area:.2f}")
 
 ###############################################
 # Random
@@ -166,3 +166,61 @@ print(f"Rolls: {roll1}, {roll2}, {roll3}")
 
 list_ints = [2, 100, 5, -10]
 
+dim_2 = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+dim_2[0].append("03")
+print(dim_2[1][1])
+
+
+candies = ["twix", "reeses", " oreos", "snickers"]
+
+for candy in candies:
+    print(candy, end = " ")
+
+print()
+
+for ind in range(len(candies)):
+    print(candies[ind], end = " ")
+
+
+candies += ["startburst", "fruit-by-the-foot"]
+
+print(candies)
+
+
+# Slicing, [start : stop : end]
+print(candies[1:4:2])
+
+
+list_nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+print(list_nums[0:3])
+print(list_nums[7:])
+print(list_nums[len(list_nums) - 3:])
+print(list_nums[-3:])
+
+print(list_nums[::2])
+
+
+list1 = [1, 2, 3]
+list2 = list1
+list3 = list2
+
+list2[0] = 100
+list3[1] = 200
+
+list3 = list1.copy()
+list3[2] = 300
+
+print(list1, list2, list3)
+
+def add_one(num_list):
+    for i in range(len(num_list)):
+        num_list[i] += 1
+
+add_one(list1)
+print(list1)
