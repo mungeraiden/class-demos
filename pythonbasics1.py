@@ -224,3 +224,43 @@ def add_one(num_list):
 
 add_one(list1)
 print(list1)
+
+###############################################
+# Strings
+
+word = " a\tb\n\n basketball\n\end\n"
+
+print(word)
+
+print(repr(word))
+
+word = word.strip()
+
+print(word)
+
+
+###############################################
+
+fruits = ['apple', 'banana', 'cherry']
+
+print(fruits)
+
+newlist = [fruit for fruit in fruits if fruit == 'banana']
+
+
+print(newlist)
+
+newlist = [fruit for fruit in fruits]
+
+print(newlist)
+
+
+numbers = [3, 7, 10, 15, 22, 30, 41, 50]
+print(numbers)
+
+
+even_squares = [num ** 2 for num in numbers if num % 2 == 0]
+
+print(even_squares)
+
+
